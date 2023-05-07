@@ -40,7 +40,7 @@ public class ClienteBanco {
           if (numDigitado == 2) {
               System.out.println("Informe o valor a receber:");
               double valorReceber = leitor.nextDouble();
-              saldoConta = saldoConta + valorReceber;
+              saldoConta += valorReceber;
           }
 
           if (numDigitado == 3) {
@@ -51,7 +51,7 @@ public class ClienteBanco {
                   System.out.println("A transferência não pode ser executada");
               } else {
                   System.out.println("Valor transferido");
-                  saldoConta = saldoConta - valorTransferido;
+                  saldoConta -= valorTransferido;
               }
           }
 
