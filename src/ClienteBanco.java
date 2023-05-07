@@ -39,13 +39,13 @@ public class ClienteBanco {
 
           if (numDigitado == 2) {
               System.out.println("Informe o valor a receber:");
-              double valorReceber = leitor.nextInt();
+              double valorReceber = leitor.nextDouble();
               saldoConta = saldoConta + valorReceber;
           }
 
           if (numDigitado == 3) {
               System.out.println("Informe o valor a transferir:");
-              double valorTransferido = leitor.nextInt();
+              double valorTransferido = leitor.nextDouble();
 
               if ((valorTransferido > saldoConta) || (saldoConta == 0)) {
                   System.out.println("A transferência não pode ser executada");
