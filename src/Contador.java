@@ -7,7 +7,7 @@ public class Contador {
         int numDigitado = 0;
         int contador = 1;
         int numAleatorio = new Random().nextInt(100);
-        ////System.out.println(numAleatorio);
+        //System.out.println(numAleatorio);
 
         while ((numDigitado != numAleatorio) && (contador <= 5)) {
 
