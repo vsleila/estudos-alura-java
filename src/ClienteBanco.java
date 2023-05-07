@@ -11,12 +11,10 @@ public class ClienteBanco {
   ***********************/
 
       Scanner leitor = new Scanner(System.in);
-
       double saldoConta = 3000;
       int numDigitado = 0;
 
       String textoPadrao = """
-             
               ------------------------
               Operações
                             
@@ -35,31 +33,28 @@ public class ClienteBanco {
 
           if (numDigitado == 1){
               System.out.println("O saldo da conta é: " + saldoConta);
-          }
-
-          if (numDigitado == 2) {
+          } else if (numDigitado == 2) {
               System.out.println("Informe o valor a receber:");
-              double valorReceber = leitor.nextInt();
-              saldoConta = saldoConta + valorReceber;
+              double valorReceber = leitor.nextDouble();
+              saldoConta += valorReceber;
+              System.out.println("Novo saldo: " + saldoConta);
           }
 
           if (numDigitado == 3) {
               System.out.println("Informe o valor a transferir:");
-              double valorTransferido = leitor.nextInt();
-
+              double valorTransferido = leitor.nextDouble();
               if ((valorTransferido > saldoConta) || (saldoConta == 0)) {
-                  System.out.println("A transferência não pode ser executada");
+                  System.out.println("A transferência não pode ser executada.");
               } else {
-                  System.out.println("Valor transferido");
-                  saldoConta = saldoConta - valorTransferido;
+                  System.out.println("Valor transferido.");
+                  saldoConta -= valorTransferido;
+                  System.out.println("Novo saldo: " + saldoConta);
               }
           }
 
           if ((numDigitado < 1) || (numDigitado > 4)){
               System.out.println("Operação Inválida. Insira um número válido: ");
-          }
-
-          if (numDigitado == 4){
+          } else if (numDigitado == 4) {
               break;
           }
       }
